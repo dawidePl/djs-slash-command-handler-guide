@@ -1,4 +1,4 @@
-#Slash Commands handler in Discord.js
+ #Slash Commands handler in Discord.js
 
 *Note: You should know discord.js library and JavaScript itself before playing with slash commands. I highly suggest looking [there](https:/discordjs.guide) for discord.js guide and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for JavaScript guide.*
 
