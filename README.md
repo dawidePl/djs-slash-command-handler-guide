@@ -1,11 +1,11 @@
- #Slash Commands handler in Discord.js
+# Slash Commands handler in Discord.js
 
 *Note: You should know discord.js library and JavaScript itself before playing with slash commands. I highly suggest looking [there](https:/discordjs.guide) for discord.js guide and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for JavaScript guide.*
 
 First of all, you should know basic idea of what slash command is and how to use it. I suggest looking [here](https://gist.github.com/advaith1/287e69c3347ef5165c0dbde00aa305d2). Everything there is nicely explained, so you can understand what you will be doing soon.
 With this in mind, let's start making handler and first slash command with it.
 
-##Setting up slash command
+## Setting up slash command
 
 First, we need to register slash command, so we can use it. In this guide I will use server-specific command, since it deploys instantly.
 
@@ -17,7 +17,7 @@ client.api.applications(client.user.id).guilds('<your guild ID>').commands.post(
 ```
 Now, since we have command, we can begin making handler. First, create a folder called `slash-commands`<br>
 
-##Creating handler
+## Creating handler
 
 *Note: You can name folder whatever you want it to be called. Keep in mind that you have to edit file locations in code.*
 
@@ -59,7 +59,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 ```
 <br>Here, every time new interaction is created (basically when slash command is used), we define a name of command used (`interaction.data.name`) and get command by name (remember that name of command is always key in our collection). Then we execute command, passing `interaction` and `client`. I used `try catch` to prevent from bot crashing.
 
-##Creating actual command
+## Creating actual command
 At this point we are ready to create command. It's very simple if you play with it for some time. Command we will make here will send respond on a private chat.
 Keep in mind that when registering command, we called it `dm` (`name: 'dm'`) and key in command collection is always it's `name` parameter (you will understand it in second). With that in mind, let's make file called `dm` in `slash_commands` folder.
 <br><br>*Note: you can name command file as you want, but it's good to name files in handler with name of command they represent.*
@@ -88,5 +88,5 @@ module.exports = {
 Now I will explain code. First, we import `discord.js` library, so we can create an embed.  Then, inside `module.exports`, we set name as `dm` (that's key in commands collection, and it needs to be same as name of command you registered). Then, inside of `execute(interaction, client)` we get member that invoke command by their ID.
 Having member defined, we make new embed. In `author` field of embed, we put an avatar/profile picture of a member, and their discord username with tag. As description, we set `You did it!`. We set it's color to embed background color and set timestap. After this, we send this embed to member.
 
-##End
+## End
 Now, we made slash command handler! I'd highly appreciate feedback. In case you have issues with code, I put template with whole code in same repository, so you can check it out and compare. Thanks for reading it and I wish you good luck!
