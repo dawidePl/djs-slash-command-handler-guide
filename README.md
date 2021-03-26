@@ -1,6 +1,6 @@
 # Slash Commands handler in Discord.js
 
-*Note: You should know discord.js library and JavaScript itself before playing with slash commands. I highly suggest looking [there](https:/discordjs.guide) for discord.js guide and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for JavaScript guide.*
+*Note: You should know discord.js library and JavaScript itself before playing with slash commands. I highly suggest looking [there](https://discordjs.guide) for discord.js guide and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for JavaScript guide.*
 
 First of all, you should know basic idea of what slash command is and how to use it. I suggest looking [here](https://gist.github.com/advaith1/287e69c3347ef5165c0dbde00aa305d2). Everything there is nicely explained, so you can understand what you will be doing soon.
 With this in mind, let's start making handler and first slash command with it.
